@@ -1,0 +1,158 @@
+/*
+    :root {
+    --background: linear-gradient(to right, #000428, #004e92);
+    --secondaryBackground: linear-gradient(to right, #43cea2, #185a9d); 
+    --text: #ffffff; 
+    --purple: linear-gradient(to right, #f39c12, #e74c3c)1; 
+    --teal: linear-gradient(to right, #1c92d2, #f2fcfe); 
+}*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*to remove the extra spacing and padding*/
+}
+
+body {
+    background: linear-gradient(to right, #000428, #004e92);
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 120px auto 0 auto; /*left auto bottom zero and right auto*/
+    max-width: 500px;
+}
+.stats-container {
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #e96443, #904e95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* around the all space of the container (Todo list and progress)*/
+    gap: 50px;
+    width: 100%;
+}
+.details {
+    width: 100%;
+}
+.details h1 {
+    margin-bottom: 10px; /* Space between the title and congrats message */
+}
+#congratsMessage {
+    color: #000428; 
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: linear-gradient(to right, #43cea2, #185a9d);
+    border-radius: 5px;
+    margin-top: 60px;
+}
+#progress {
+    width: 0%;
+    height: 10px;
+    background: linear-gradient(to right, #000428, #004e92);
+    border-radius: 10px;
+    transition: all 0.3s ease; /* */
+}
+#numbers {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #000428, #004e92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes the shape a circle */
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+form {
+    margin-top: 40px; /*make some space bte the upper stats container and input*/
+    width: 100%;
+    display: flex;
+    gap: 12px;
+}
+input {
+    padding: 16px;
+    background: linear-gradient(to right, #e96443, #904e95);
+    border: 1px solid;
+    flex: 1;
+    border-radius: 10px;
+    outline: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px; /* Increased font size */
+}
+input::placeholder {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px; /* Increased font size */
+}
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #e96443, #904e95);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+}
+.task-list {
+    list-style: none;
+    width: 100%;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #e96443, #904e95);
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 12px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px; /*font size */
+    height: 50px; /*height*/
+    width: 440px;
+}
+.task-item.completed .task-text {
+    text-decoration: line-through;
+}
+.task-checkbox {
+    margin-right: 16px;
+    width: 24px;
+    height: 24px; 
+}
+.task-text {
+    flex: 1;
+    text-align: center;
+}
+.edit-button, .delete-button {
+    background: none;
+    border: none;
+    color: #000; 
+    cursor: pointer;
+    font-size: 24px; 
+}
+.edit-button:hover, .delete-button:hover {
+    color: #000428 !important; 
+}
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
